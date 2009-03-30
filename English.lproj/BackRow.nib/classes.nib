@@ -1,0 +1,15 @@
+{
+    IBClasses = (
+        {CLASS = AQKeyboardNavigator; LANGUAGE = ObjC; SUPERCLASS = NSOpenGLView; }, 
+        {
+            CLASS = AQNSWindowRenderer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_glView" = NSOpenGLView; "_window" = NSWindow; }; 
+            SUPERCLASS = BRWindowRenderer; 
+        }, 
+        {CLASS = BRRenderer; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = BRWindowRenderer; LANGUAGE = ObjC; SUPERCLASS = BRRenderer; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

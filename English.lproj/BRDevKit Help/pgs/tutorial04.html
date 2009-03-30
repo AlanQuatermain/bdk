@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="xcode, project, tutorial, selection, interaction, events, stack, alert, message" />
+		<meta name="description" content="A simple guide to help you create your first plugin" />
+		<title>Tutorial: Part 4</title>
+	</head>
+	
+	<body>
+		<div id="banner2">
+			<a name="tutorial04"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+				<span class="bread">&gt;</span>
+				<a class="bread" href="help:anchor='tutorial01' bookID=BRDevKit Help">Tutorial</a>
+			</div>
+			<div id="index">
+				<a class="leftborder2" href="help:anchor='tutorial03' bookID=BRDevKit Help">&lt; Previous Step</a>
+				<a class="leftborder2" href="help:anchor='tutorial05' bookID=BRDevKit Help">Next Step &gt;</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Step 4: Handling User Selections</h1>
+			</div>
+			
+			<p>The last thing we need to make our plugin complete is the ability to respond to user interaction. In menu controllers, this is done through the <code>-itemSelected:</code> callback method, which we'll implement now.</p>
+			<p>We'll take the simple approach and put up an alert dialog showing the item which was selected. To do this we use the <code>BRAlertController</code> class, and we'll build the alert message using NSString's <code>-stringWithFormat:</code> method. Once we've got our controller, we put it onscreen by pushing it onto the controller stack on which our menu controller currently resides.</p>
+			<div summary="Code Block" id="taskbox">
+<pre><code>
+NSString * msg = [NSString stringWithFormat: @"Selected item %d", row];
+id controller = [BRAlertController alertOfType: kBRAlertControllerTypeMessage
+                                        titled: @"Item Selected"
+                                   primaryText: msg
+                                 secondaryText: @""
+                                     withScene: [self scene]];
+
+[[self stack] pushController: controller];</code></pre>
+			</div>
+			
+			<p>Now we're ready to compile and launch our appliance. Click the <b>Build and Go</b> button on the Xcode toolbar, and you will see the BackRow Test application launch and begin to play the Apple TV intro movie. When that is done, our appliance will be shown in the window, like so:</p>
+			<p class="screencap"><img src="../gfx/runwindow1.png" width="500px" alt="Initial Appliance Window" /><br />The initial appearance of our appliance.</p>
+			
+			<p>You can control the interface using either the remote or the <a href="help:anchor='keyboard' bookID=BRDevKit Help">keyboard</a>. At this point, let's select <b>Item 1</b>. As you can see, it shows a message, and you can press Menu or Escape to return to your plugin. However, the message doesn't have the correct value, so in the next step we'll use the Xcode debugger to fix that. Press Command-Q to quit the test harness.</p>
+			<p class="screencap"><img src="../gfx/runwindow2.png" width="500px" alt="Incorrect Message Displayed" /><br />An incorrect message is being displayed for Item 1.</p>
+		</div>
+	</body>
+
+</html>

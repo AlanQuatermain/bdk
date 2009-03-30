@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="xcode, project, tutorial, debug, debugger, debugging, fix" />
+		<meta name="description" content="A simple guide to help you create your first plugin" />
+		<title>Tutorial: Part 5</title>
+	</head>
+	
+	<body>
+		<div id="banner2">
+			<a name="tutorial05"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+				<span class="bread">&gt;</span>
+				<a class="bread" href="help:anchor='tutorial01' bookID=BRDevKit Help">Tutorial</a>
+			</div>
+			<div id="index">
+				<a class="leftborder2" href="help:anchor='tutorial04' bookID=BRDevKit Help">&lt; Previous Step</a>
+				<a class="leftborder2" href="help:anchor='tutorial06' bookID=BRDevKit Help">Next Step &gt;</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Step 5: Debugging and Fixing</h1>
+			</div>
+			
+			<p>The first place to look for the error is in the <code>-itemSelected:</code> method of the BDKApplianceController class, so open <b>ApplianceController.m</b> and click in the space to the left of the first line in that method, as shown here:</p>
+			<p class="screencap"><img src="../gfx/setbreakpoint.png" alt="Set Breakpoint" /><br />The breakpoint set at the start of the function.</p>
+			
+			<p>Now we will start the application in the debugger, by clicking and holding on the <b>Build &amp; Go</b> button, and selecting <b>Build &amp; Debug</b> from the menu that pops up. The debugger window will open, and the BackRow Test application will launch and begin to show the intro movie. Press Menu or Escape here and you will see your appliance once again.</p>
+
+			<p>Select the first item in the list, and the debugger will hit our breakpoint. Take one step and you can see it create the message string, with the wrong value:</p>
+			<p class="screencap"><img src="../gfx/debugwrong.png" width="500px" alt="Incorrect Variable Value" /><br />The value for the <i>msg</i> variable is incorrect here.</p>
+			
+			<p>The error is on that first line: Our items are named starting at index 1, but the array starts at index 0. Therefore, we need to change the first line to read like the following:</p>
+			<div summary="Code Block" id="taskbox">
+				<p><code>NSString * msg = [NSString stringWithFormat: @"Selected item %d", row + 1];</code></p>
+			</div>
+			
+			<p>Now we can try this out immediately, using the Fix &amp; Continue feature of Xcode, available in Debug builds.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Save the file.</p>
+				<p>On the toolbar in the debugger window, click the <b>Fix</b> button.</p>
+				<p>Drag the red arrow representing the current location up to the first line again (to the same position as the breakpoint).</p>
+				<p>Take one step, and look at the new value for the <i>msg</i> variable, as shown below</p>
+			</div>
+			<p class="screencap"><img src="../gfx/debugright.png" width="500px" alt="Corrected Variable Value" /><br />The corrected <i>msg</i> variable.</p>
+			
+			<p>At this point, if you press the Continue button, you will see the message appear in the BackRow window, this time showing the correct item number. Disable the breakpoint in the debugger (click on the breakpoint marker or drag it off the left edge of the window) and try selecting other menu items. These all display the correct values now.</p>
+		</div>
+	</body>
+
+</html>

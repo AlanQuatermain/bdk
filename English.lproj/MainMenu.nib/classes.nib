@@ -1,0 +1,36 @@
+{
+    IBClasses = (
+        {
+            CLASS = AQNSWindowRenderer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {"_glView" = NSOpenGLView; "_window" = NSWindow; }; 
+            SUPERCLASS = BRWindowRenderer; 
+        }, 
+        {
+            ACTIONS = {
+                checkboxHit = id; 
+                modeSelectionChanged = id; 
+                startInterface = id; 
+                stopInterface = id; 
+            }; 
+            CLASS = AQOptionsManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyMainMenuFixButton = NSButton; 
+                modeMatrix = NSMatrix; 
+                optionsWindow = NSWindow; 
+                pluginPathField = NSComboBox; 
+                printRenderTreeButton = NSButton; 
+                showFPSButton = NSButton; 
+                showSafeAreasButton = NSButton; 
+                startButton = NSButton; 
+                stopButton = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = BRRenderer; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = BRWindowRenderer; LANGUAGE = ObjC; SUPERCLASS = BRRenderer; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

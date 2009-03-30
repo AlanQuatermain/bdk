@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="xcode, project, tutorial, start, getting started, guide, beginner" />
+		<meta name="description" content="A simple guide to help you create your first plugin" />
+		<title>Appliance Plugin Tutorial</title>
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="tutorial01"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+			</div>
+			<div id="index">
+				<a class="leftborder" href="help:anchor='tutorial02' bookID=BRDevKit Help">Next Step &gt;</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Creating Your First Apple TV Appliance</h1>
+			</div>
+			
+			<p>We will start by creating a new plugin within Xcode using the Apple TV Appliance project template:</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Open Xcode, and select <b>File->New Project</b>.</p>
+				<p>In the New Project window, open the Apple TV group and select <b>Appliance</b>.</p>
+				<p>When asked for a Project name, enter <b>'Tutorial'</b> and click OK.</p>
+			</div>
+			
+			<p>Now you will be presented with the New Project window, which will look something like this:</p>
+			<p class="screencap"><img src="../gfx/projwindow1.png" width="500px" alt="Initial Project Window" /><br />The initial window for the new project.</p>
+			
+			<p>Next we will want to setup the project to run the BRDevKit test harness application when we choose to run or debug our project. We can use a special environment variable to make the test harness automatically show the BackRow window at startup with our plugin as its root.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>From the Xcode menu, select <b>Project->New Custom Executable…</b></p>
+				<p>For the Executable Name, enter <b>'BackRow Test'</b>.</p>
+				<p>For the Executable Path, enter <b>'/Developer/Applications/BackRow Test.app'</b>.</p>
+				<p>In the 'Info' window that appears, ensure that the assigned option for the working directory is set to <b>Build products directory</b>.</p>
+				<p>Select the <b>Arguments</b> tab.</p>
+				<p>In the lower half of the window, press '+' to create a new environment variable.</p>
+				<p>Enter the name as <b>'BDKStartupWithRootItem'</b></p>
+				<p>Enter the value as <b>'${PROJECT}.frappliance'</b></p>
+			</div>
+			<p>You should now see something like the following:</p>
+			<p class="screencap"><img src="../gfx/execenv.png" height="350px" alt="Executable Settings Window" /><br />The executable settings when using BackRow Test to launch your appliance.</p>
+			
+			<p>Having completed this procedure, we're now ready to begin writing our plugin.</p>
+		</div>
+	</body>
+
+</html>

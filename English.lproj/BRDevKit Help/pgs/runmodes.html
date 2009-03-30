@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="backrow, options, mode, run mode" />
+		<meta name="description" content="The test harness can be run in two different modes." />
+		<title>Run Modes</title>
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="runmode"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Test Harness Run Modes</h1>
+			</div>
+			
+			<p>The test harness provides two different modes of operation.</p>
+			<p>The first is Apple TV Interface mode, where it displays the Apple TV's main menu, and operates in a similar manner to the real Finder application on the Apple TV. However, this requires some extra work to set up.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>
+					You will need to copy three folders from inside the Finder application on your Apple TV:
+					<ul>
+						<li><b>Contents/Patches</b></li>
+						<li><b>Contents/PlugIns</b></li>
+						<li><b>Contents/Screen Savers</b></li>
+					</ul>
+				</p>
+				<p>Once this is done, select the option <b>Start the AppleTV Interface</b> in the Options window.</p>
+				<p>Click <b>Start</b> to launch the Apple TV Interface.</p>
+			</div>
+			<p>The second mode allows you to run only your own plugin, without requiring it to be copied into the application bundle, as in Apple TV Interface mode.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Select 'Run a specific plugin' in the Options window.</p>
+				<p>In the text field, enter the path to your plugin, or alternatively place the text entry cursor in the field and then drag the item from the Finder onto the text field to fill in the path automatically.</p>
+				<p>Click <b>Start</b> to launch your appliance in the BackRow window.</p>
+			</div>
+			<p>There is one other option in the Run Mode section of the Options window, which is only applicable when running in Apple TV Interface mode: You can choose whether the main menu will be scrollable like most menus, or whether it will be static, as it is on a stock Apple TV system. This option can only be changed while the test harness is not running however, since it must be set before the main menu is created.</p>
+			
+			<h3>A note on running a specific plugin:</h3>
+			<p>It is important, when running your plugin from outside the test harness application bundle, that a copy of your plugin does not already exist inside it. The harness loads any plugins it finds at startup, because (for instance) a number of the Apple plugins initialise some media providrs upon which your plugin might depend. If an earlier copy of your plugin resides within the application bundle, you will likely see that rather than your updated development version when testing, which can lead to unexpected results.</p>
+			
+			<h2 class="seealso">See also</h2>
+			<p class="seealso"><a href="help:anchor='debugopts' bookID=BRDevKit Help">Test Harness Debug Options</a></p>
+		</div>
+	</body>
+
+</html>

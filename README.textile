@@ -1,0 +1,5 @@
+h1. BackRow Development Kit
+
+This project is based around both AppleTV v1.1 and Mac OS X v10.4. The former requirement is down to me not having enough time to upgrade it for later ATV software releases, and the latter is because the AppleTV frameworks are based on OS X 10.4. To work with OS X 10.5 or later, one would need to reverse-engineer the Platform support used by Xcode 3.1 onwards for the iPhone device and simulator platforms. I have some of this in progress, albeit in slow progress, and can pass this on.
+
+More information on the kit itself and its use is available "here":http://alanquatermain.net/bdk/.

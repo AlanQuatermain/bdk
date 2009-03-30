@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="xcode, project, tutorial, header, title" />
+		<meta name="description" content="A simple guide to help you create your first plugin" />
+		<title>Tutorial: Part 6</title>
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="tutorial06"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+				<span class="bread">&gt;</span>
+				<a class="bread" href="help:anchor='tutorial01' bookID=BRDevKit Help">Tutorial</a>
+			</div>
+			<div id="index">
+				<a class="leftborder" href="help:anchor='tutorial05' bookID=BRDevKit Help">&lt; Previous Step</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Step 6: Finishing Up</h1>
+			</div>
+			
+			<p>At this point, our simple plugin is almost complete. However, there's one more cosmetic change we can make; our list does not yet have a title. To implement this, open <b>ApplianceController.m</b>, go to the <code>-initWithScene:</code> method, and add the following code before the <code>setDatasource:</code> line:</p>
+			<div summary="Code Block" id="taskbox">
+				<p><code>[self setListTitle: @"BDK Tutorial"];</code></p>
+			</div>
+			
+			<p>Now, when you build and run your appliance, you will see the following screen:</p>
+			<p class="screencap"><img src="../gfx/listheader.png" width="500px" alt="List Now Shows a Title" /><br />The list now shows a title in its header cell.</p>
+			
+			<hr />
+			
+			<p>That's all for this tutorial. I hope that this toolkit proves useful, and that it inspires you to create many wonderful additions to the Apple TV's arsenal.</p>
+			<p>For more information, please visit these useful sites:</p>
+			<div summary="More Information" id="taskbox">
+				<p>
+					<img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> <a href="http://alanquatermain.net/">The Author's Website</a><br />
+					<img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> <a href="http://alanquatermain.net/category/prog/brtutorials/">More BackRow Programming Tutorials</a><br />
+					<img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> <a href="http://wiki.awkwardtv.org/">The AwkwardTV Wiki</a><br />
+					<img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> <a href="http://forum.awkwardtv.org/">The AwkwardTV Forums</a>
+				</p>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="environment, env, environment variables, Xcode, executable" />
+		<meta name="description" content="The BackRow Test application recognizes a few environment variables" />
+		<title>Recognised Environment Variables</title>
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="environmentvars"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Recognised Environment Variables</h1>
+			</div>
+			
+			<p>The test harness application recognises a few key environment variables which enable you to control some of its inner processes. This list may grow with time and new feature requests, but at the present there are two recognised variables:</p>
+			<div summary="To Do This" id="taskbox">
+				<p>
+					<img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> <b>BDKStartupWithRootItem</b><br />
+					Set the value to be the path to a specific appliance plugin, and that plugin will be launched automatically upon startup of the test harness. The path supplied is used as-is, and is therefore considered relative to the working directory. This is designed to be used within the Xcode Custom Executable setup.
+				</p>
+				<p>
+					<img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> <b>BDKSkipIntroMovie</b><br />
+					Set the value of this variable to <b>YES</b> (case insensitive) or <b>1</b> to make the BackRow window skip the Apple TV intro movie when it opens.
+				</p>
+			</div>
+
+			<h2 class="seealso">See also</h2>
+			<p class="seealso"><a href="help:anchor='customexec' bookID=BRDevKit Help">Setting as a Custom Executable</a></p>
+		</div>
+	</body>
+
+</html>

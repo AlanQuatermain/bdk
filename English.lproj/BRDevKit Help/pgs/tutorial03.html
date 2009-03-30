@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="xcode, project, tutorial, menu, list, controller, data source" />
+		<meta name="description" content="A simple guide to help you create your first plugin" />
+		<title>Tutorial: Part 3</title>
+	</head>
+	
+	<body>
+		<div id="banner2">
+			<a name="tutorial03"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BackRow Developers' Kit Help">BackRow Developers' Kit Help</a>
+				<span class="bread">&gt;</span>
+				<a class="bread" href="help:anchor='tutorial01' bookID=BRDevKit Help">Tutorial</a>
+			</div>
+			<div id="index">
+				<a class="leftborder2" href="help:anchor='tutorial02' bookID=BRDevKit Help">&lt; Previous Step</a>
+				<a class="leftborder2" href="help:anchor='tutorial04' bookID=BRDevKit Help">Next Step &gt;</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Step 3: Implementing a Simple Menu System</h1>
+			</div>
+			
+			<p>Now we'll look at implementing some functionality in our appliance. The BDKAppliance class is essentially complete now; all necessary methods are already implemented, and the only really important one is <code>-applianceControllerWithScene:</code>. In which case, we will concentrate on BDKApplianceController for the remainder of this tutorial.</p>
+			
+			<p>Open <b>ApplianceController.m</b> and look at the stub methods that have been generated for you. We don't need to make use of <code>-previewControllerForItem:</code> here, we'll leave that for another day. Also, we won't be implementing anything in the <code>-willBePopped</code> family of callbacks. As such, feel free to remove those methods from your header and source files, although it is safe to leave them where they are.</p>
+			<p>Our first order of business is to set up some sort of data source for the menu list. In this case, we'll use an <code>NSArray</code> containing the titles of the elements. We'll also need to tell our list control that this class is its datasource. These actions must be performed in this order, since calling <code>-setDatasource:</code> will cause our data-retrieval functions to be called immediately, so we need to have our data ready in advance.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Open <b>ApplianceController.h</b> and enter the following in the parameter declaration area:</p>
+				<p id="asindent"><code>NSArray * myListItems;</code></p>
+				<p>Open <b>ApplianceController.m</b> and navigate to <code>-initWithScene:</code>.</p>
+				<p>Replace the comment in that function with the following code:</p>
+				<p id="asindent">
+					<code>
+						myListItems = [[NSArray alloc] initWithObjects: @"Item 1", @"Item 2", @"Item 3", nil];<br />
+						[[self list] setDatasource: self];
+					</code>
+				</p>
+				<p>We now need to release this variable when we are deallocated, so enter the following at the top of the <code>-dealloc</code> function:</p>
+				<p id="asindent"><code>[myListItems release];</code></p>
+			</div>
+			
+			<p>Now we need to implement the list data source functions, <code>-itemForRow:</code>, <code>-titleForRow:</code>, and <code>-itemCount</code>. Let's do that now.</p>
+			<p><code>-itemCount</code> will be the simplest to implement. Just replace the contents of that function with the following code:</p>
+			<div summary="Code Block" id="taskbox">
+				<p>
+					<code>return ( [myListItems count] );</code>
+				</p>
+			</div>
+			
+			<p>Next up is another easy function, <code>-titleForRow:</code></p>
+			<div summary="Code Block" id="taskbox">
+				<p>
+					<pre><code>
+if ( row >= [myListItems count] )
+	return ( nil );
+
+return ( [myListItems objectAtIndex: row] );</code></pre>
+				</p>
+			</div>
+			
+			<p>The <code>-rowForTitle:</code> function already has a working implementation, so all we need to do now is the <code>-itemForRow:</code> method. Fortunately, in this example that isn't too involved, we just need to replace the contents of the method like so:</p>
+			<div summary="Code Block" id="taskbox">
+				<p>
+					<pre><code>
+if ( row >= [myListItems count] )
+	return ( nil );
+
+id result = [BRTextMenuItemLayer menuItemWithScene: [self scene]];
+[result setTitle: [myListItems objectAtIndex: row]];
+return ( result );</code></pre>
+				</p>
+			</div>
+			
+			<p>This now leaves us with the following data source code:</p>
+			<div summary="Code Block" id="taskbox">
+<pre><code>
+- (long) itemCount
+{
+    return ( [myListItems count] );
+}
+
+- (id&lt;BRMenuItemLayer&gt;) itemForRow: (long) row
+{
+    if ( row >= [myListItems count] )
+        return ( nil );
+    
+    id result = [BRTextMenuItemLayer menuItemWithScene: [self scene]];
+    [result setTitle: [myListItems objectAtIndex: row]];
+    return ( result );
+}
+
+- (NSString *) titleForRow: (long) row
+{
+    if ( row >= [myListItems count] )
+        return ( nil );
+    
+    return ( [myListItems objectAtIndex: row] );
+}</code></pre>
+			</div>
+		</div>
+	</body>
+
+</html>

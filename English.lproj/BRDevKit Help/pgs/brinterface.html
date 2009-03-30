@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="BackRow, Interface, Window, AppleTV, Main Menu" />
+		<meta name="description" content="The BackRow Interface window shows the Apple TV User Interface" />
+		<title>The BackRow Interface Window</title>
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="brinterface"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>The BackRow Interface Window</h1>
+			</div>
+			
+			<p>The BackRow window is the primary means of interacting with and testing your appliance plugin. It implements enough of the real Apple TV system to enable most plugins to run unaltered, but it pointedly does not include any of the iTunes or iPhoto providers or media players. As such, it is possible that some things will not work in the same manner as they do on the real Apple TV.</p>
+			<p>To interact with your appliance, you can use either the Apple Remote or the keyboard. If your computer comes with an Apple Remote (i.e. an iMac, MacBook, or MacBook Pro), you can use the remote in much the same way as you would with your Apple TV, with one exception: holding the play/pause button will terminate the BackRow Interface and close the window.</p>
+			<p><a name="keyboard"></a>Otherwise, you can use a few simple keyboard commands to perform the same actions:</p>
+			<div summary="Keyboard Commands" id="taskbox">
+				<p>The cursor keys simulate the up, down, left, and right buttons on the Apple Remote. This includes holding left or right to fast forward or rewind.</p>
+				<p>The Escape key simulates the menu key. Holding escape will bring you to the main menu (or the root menu of your own plugin, depending on the <a href="help:anchor='runmode' bookID=BRDevKit Help">run mode</a> you're using).</p>
+				<p>Pressing either Space or Return will simulate the Play/Pause button.</p>
+				<p>To quit the interface from the keyboard, simply press Command-W to close the window. Unlike when using the Apple Remote, holding Space or Return will not terminate it.</p>
+			</div>
+			<h2 class="seealso">See also</h2>
+			<p class="seealso"><a href="help:anchor='runmode' bookID=BRDevKit Help">Test Harness Run Modes</a></p>
+			<p class="seealso"><a href="help:anchor='debugopts' bookID=BRDevKit Help">Test Harness Debugging Options</a></p>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="backrow, options, debug, fps, frames, frames per second, print, safe area, tree, render" />
+		<meta name="description" content="The test harness enables you to set some BackRow debugging options" />
+		<title>Debug Options</title>
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="debugopts"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developers' Kit Help</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Test Harness Debug Options</h1>
+			</div>
+			
+			<p>The test harness can enable and disable three useful debugging options within the BackRow scene rendering system. These can all be enabled and disabled in real-time.</p>
+			<p>You can choose to display the framerate of the GL renderer in the BackRow window:</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Check the <b>Show FPS Counter</b> box in the Options window.</p>
+				<p>The framerate will appear in small characters in the bottom left of the window. Values above 50fps will be coloured green, those below 50fps will be coloured red.</p>
+			</div>
+			<p>You can also choose to have the renderer print out details of each and every layer object it draws during each render pass.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Check the <b>Print Render Tree</b> box in the Options window.</p>
+				<p>This will write information to stdout, and can be very verbose, especially during animations.</p>
+			</div>
+			<p>You can also have the renderer show you which areas of the screen are considered safe for use, i.e. what is in the focal area of the screen and what is liable to disappear into overscan regions.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Check the <b>Show Safe Areas</b> box in the Options window.</p>
+				<p>A transparent green coloured block will show you the focal area, a red area outside that indicates the fringe, and the uncoloured area outside that is the part liable to run into overscan.</p>
+			</div>
+			
+			<h2 class="seealso">See also</h2>
+			<p class="seealso"><a href="help:anchor='runmode' bookID=BRDevKit Help">Test Harness Run Modes</a></p>
+		</div>
+	</body>
+
+</html>

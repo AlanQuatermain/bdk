@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head>
+		<meta name="robots" content="anchors" />
+		<link href="../sty/task_style.css" type="text/css" rel="stylesheet" media="all" />
+		<title>What's New in Version 1.1</title>
+		<meta name="keywords" content="whatsnew, changes, changelog, 1.1, update" />
+		<meta name="description" content="What's new in version 1.1." />
+	</head>
+	
+	<body>
+		<div id="banner">
+			<a name="whatsnew"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BRDevKit Help">BackRow Developer's Kit Help</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>What's New in version 1.1</h1>
+			</div>
+
+			<p>With the release of AppleTV software version 1.1, and version 2.1 of the BackRow framework, a number of changes were required to make the BDK compatible with them. The BDK application now <b>requires</b> the installation of BackRow v2.1, along with the new AppleTV framework. The latter implements a few classes that were originally in BackRow v2.0; these have been moved out of BackRow since that is now a part of Leopard, which doesn't require (or use) the AppleTV-specific routines.
+			</p>
+
+			<table class="dots" width="100%" border="0" cellspacing="0" cellpadding="0" summary="One column table with heading">
+				<tr>
+					<td class="blue">
+						<h3><b>The AppleTV framework</b></h3>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<p>The AppleTV framework can be found by downloading the software update disk image from Apple's servers (visit <a href="http://wiki.awkwardtv.org/wiki/June_20_2007_Patch_%28aka_the_YouTube_Patch%29">the AwkwardTV wiki</a> for details on this) or by retrieving the files from your updated AppleTV.</p>
+						<p>In addition to being required by the BDK, the AppleTV framework must be linked to by anyone using the following features, which have been moved wholesale into this new framework:</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> Screen savers (including the screen saver manager)</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> Hardware variables (cache sizes, hardware info, etc.)</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> Software Update</p>
+					</td>
+				</tr>
+			</table>
+			<br />
+			<table class="dots" width="100%" border="0" cellspacing="0" callpadding="0" summary="One column table with heading">
+				<tr>
+					<td class="blue">
+						<h3><b>BackRow Changes</b></h3>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<p>The BackRow framework has undergone a number of changes since the previous version. Aside from those things that affect plugin loading (which are detailed below), the following items have been found, which will necessitate code changes by plugin authors using them:</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> BRListControl's <code>-selection</code> and <code>-setSelection:</code> methods are now called <code>-renderSelection</code> and <code>-setRenderSelection:</code>.</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> BRIntroMovieController has been removed, and the intro movie itself is now located within the Finder application. For the time being at least, the BDK test application will still attempt to locate it within the BackRow framework, so you are free to place your own copy into the Resources folder of that framework to have it show up in the test application. Without it, the movie will simply not show up (which will probably make some people very happy).</p>
+						<p>More information will be posted as it is found at <a href="http://alanquatermain.net/brdevkit/">the BDK mini-site</a>.</p>
+					</td>
+				</tr>
+			</table>
+			<table class="dots" width="100%" border="0" cellspacing="0" callpadding="0" summary="One column table with heading">
+				<tr>
+					<td class="blue">
+						<h3><b>Necessary Appliance Plugin Changes</b></h3>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<p>Along with the changes listed above, there are a couple of changes which affect appliance plugin authors directly. These concern both the appliance class whitelist and a new class in BackRow v2.1, <b>BRFeatureManager</b>, which the main menu uses to filter out plugins based on parental controls. Following is the list of steps needed to make your plugin compatible with Apple TV software version 1.1:</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> Change the CFBundleIdentifier in your appliance's Info.plist so it begins with "com.apple.frontrow.appliance".</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> Change the fake class name returned from the +className override to something like "RUIMoviesAppliance".</p>
+						<p>The BRFeatureManager class uses strings to record whether certain features are enabled or disabled (the strings/keys are entirely arbitrary, so we are able to implement parental controls within our own plugins, too). I believe this is mostly designed to enable parental controls, but the part of the implementation as it concerns the main menu now filtering appliances goes like this:</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> BRFeatureManager looks up the given 'key', which in this case is an appliance plugin's CFBundleIdentifier.</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> If the key is present in the feature dictionary, it returns the YES or NO depending on the object for that key (an NSNumber).</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> If the key is not present, it checks whether the key begins with "com.apple.frontrow.appliance".</p>
+						<p><img src="../gfx/orngbullet.gif" alt="bullet" height="8" width="8" border="0" /> If it does, the manager returns YES, enabled. Otherwise it returns NO, not enabled.</p>
+						<p>Therefore the simplest way to get past the new BRFeatureManager in a backward-compatible way is simply to change your bundle identifiers.</p>
+						<p>The other alternative is to add this initialize function to your principal class, which will check for the existence of the BRFeatureManager, and register the plugin if it's there:</p>
+						<div summary="Code Block" id="taskbox">
+<pre><code>
++ (void) initialize
+{
+    Class cls = NSClassFromString( @"BRFeatureManager" );
+    if ( cls == Nil )
+        return;
+
+    [[cls sharedInstance] enableFeatureNamed: 
+    	[[NSBundle bundleForClass: self] bundleIdentifier];
+}</code></pre>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+	</body>
+
+</html>

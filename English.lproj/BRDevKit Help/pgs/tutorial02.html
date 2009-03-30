@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link media="all" rel="stylesheet" href="../sty/task_style.css" />
+		<meta name="keywords" content="xcode, project, tutorial, project setup, naming, naming conventions" />
+		<meta name="description" content="A simple guide to help you create your first plugin" />
+		<title>Tutorial: Part 2</title>
+	</head>
+	
+	<body>
+		<div id="banner2">
+			<a name="tutorial02"></a>
+			<div id="machelp">
+				<a class="bread" href="help:anchor='access' bookID=BackRow Developers' Kit Help">BackRow Developers' Kit Help</a>
+				<span class="bread">&gt;</span>
+				<a class="bread" href="help:anchor='tutorial01' bookID=BRDevKit Help">Tutorial</a>
+			</div>
+			<div id="index">
+				<a class="leftborder2" href="help:anchor='tutorial01' bookID=BRDevKit Help">&lt; Previous Step</a>
+				<a class="leftborder2" href="help:anchor='tutorial03' bookID=BRDevKit Help">Next Step &gt;</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="BRDevKit Icon" src="../gfx/largeicon.png" />
+			</div>
+			<div id="pagetitle">
+				<h1>Step 2: Setting Up the Source</h1>
+			</div>
+			
+			<p>Having created the sample project, there are a few preliminary steps we should take care of now, to avoid conflicts later.</p>
+			<p>Since this is a plugin loaded into another application along with a potentially large list of other plugins, we need to take into account the fact that there are no namespaces in Objective-C. The standard workaround for this is to use unique prefixes for your class names; the base OS X classes all use 'NS' (from NeXTStep), BackRow uses BR and in some cases RUI, and I personally favour AQ. Your initials, or the initials of the project you're working on are usually a good choice. In this tutorial, we will be using 'BDK'.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Open <b>TutorialAppliance.h</b>, and change the class name to <code>BDKTutorialAppliance</code></p>
+				<p>Open <b>TutorialAppliance.m</b> and make the same change. Note that you'll also need to change the value in the <code>-moduleKey</code> function, and make a similar change for the controller class name in <code>-applianceControllerForScene:</code>.</p>
+				<p>Open <b>TutorialApplianceController.h</b> and <b>TutorialApplianceController.m</b>, making the same changes to the class names.</p>
+			</div>
+			<p>Your two classes should now be correctly named <code>BDKTutorialAppliance</code> and <code>BDKTutorialApplianceController</code>. If you attempt to compile the project now, if should compile without error.</p>
+			
+			<p>Our next order of business is the bundle identifier, which should be changed to something unique.</p>
+			<div summary="To Do This" id="taskbox">
+				<p>Open <b>Info.plist</b>; preferably by control-clicking (or right-clicking) on it and choosing 'Open With Finder' to open it using the <b>Property List Editor</b> application.</p>
+				<p>Edit the value for the <b>CFBundleIdentifier</b> key so that it reads <b>com.yourcompany.bdktutorial</b>.</p>
+				<p>Edit the value for <b>NSPrincipalClass</b>, placing <b>BDK</b> in front of the name, to match our new class name.</p>
+				<p>Open <b>Appliance.m</b>, and edit the value returned from <code>+moduleKey</code> to also read <b>com.yourcompany.bdktutorial</b>.</p>
+			</div>
+		</div>
+	</body>
+
+</html>

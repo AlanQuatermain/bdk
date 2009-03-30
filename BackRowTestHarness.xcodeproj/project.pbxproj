@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3827CF8B0BFCE999004103B7 /* AQKeyboardNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3827CF890BFCE999004103B7 /* AQKeyboardNavigator.m */; };
+		3827D0430BFE4C4C004103B7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3827D0420BFE4C4C004103B7 /* IOKit.framework */; };
+		3827D0470BFE4C5E004103B7 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3827D0460BFE4C5E004103B7 /* Quartz.framework */; };
+		3827D0850BFE4CD5004103B7 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3827D0840BFE4CD5004103B7 /* QuickTime.framework */; };
+		3834E0270C0356CD009BE46D /* BRDevKit Help in Resources */ = {isa = PBXBuildFile; fileRef = 3834DFFC0C0356CD009BE46D /* BRDevKit Help */; };
+		3834E04C0C038CF6009BE46D /* BRDevKit.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3834E04B0C038CF6009BE46D /* BRDevKit.icns */; };
+		3855C3CA0BFB71A100DEB4F8 /* AQGLViewRenderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855C3C80BFB71A100DEB4F8 /* AQGLViewRenderContext.m */; };
+		3855C3DB0BFB785B00DEB4F8 /* AQGLViewPixelFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855C3D90BFB785B00DEB4F8 /* AQGLViewPixelFormat.m */; };
+		3855C3E30BFB7A5700DEB4F8 /* AQGLViewScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855C3E10BFB7A5700DEB4F8 /* AQGLViewScene.m */; };
+		3855C42B0BFBCCC600DEB4F8 /* BackRow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 3855C4290BFBCCC600DEB4F8 /* BackRow.nib */; };
+		3855C43A0BFBE4F500DEB4F8 /* AQOptionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855C4380BFBE4F500DEB4F8 /* AQOptionsManager.m */; };
+		38615C2E0BF9DD830080B168 /* AQNSWindowRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38615C2C0BF9DD830080B168 /* AQNSWindowRenderer.m */; };
+		38615C330BF9DDC80080B168 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38615C320BF9DDC80080B168 /* Cocoa.framework */; };
+		38615C350BF9DDD70080B168 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38615C340BF9DDD70080B168 /* OpenGL.framework */; };
+		38615C3D0BF9DEF60080B168 /* AQAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38615C3B0BF9DEF60080B168 /* AQAppManager.m */; };
+		3879133D0BEE469A00889F93 /* BackRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3879133C0BEE469A00889F93 /* BackRow.framework */; };
+		387913440BEE483900889F93 /* AQHarnessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387913430BEE483900889F93 /* AQHarnessController.m */; };
+		3879134D0BEE485F00889F93 /* AQIRRemoteMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3879134C0BEE485F00889F93 /* AQIRRemoteMonitor.m */; };
+		387917A90BEF99A800889F93 /* AQFakeMediaProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 387917A70BEF99A800889F93 /* AQFakeMediaProvider.m */; };
+		389D59850C2A0F6A00CDA967 /* QuIntroMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389D59830C2A0F6A00CDA967 /* QuIntroMovieController.m */; };
+		389D59DC0C2A3D4600CDA967 /* AppleTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D59DB0C2A3D4600CDA967 /* AppleTV.framework */; };
+		38FAF83E0BFF4DA400853CFE /* AQDisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAF83C0BFF4DA400853CFE /* AQDisplayManager.m */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		387913A50BEF78D900889F93 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* BackRowTestHarness_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackRowTestHarness_Prefix.pch; sourceTree = "<group>"; };
+		3827CF880BFCE999004103B7 /* AQKeyboardNavigator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AQKeyboardNavigator.h; sourceTree = "<group>"; };
+		3827CF890BFCE999004103B7 /* AQKeyboardNavigator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AQKeyboardNavigator.m; sourceTree = "<group>"; };
+		3827D0420BFE4C4C004103B7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		3827D0460BFE4C5E004103B7 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		3827D0840BFE4CD5004103B7 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		3834DFFD0C0356CD009BE46D /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = English; path = "English.lproj/BRDevKit Help"; sourceTree = "<group>"; };
+		3834E04B0C038CF6009BE46D /* BRDevKit.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BRDevKit.icns; sourceTree = "<group>"; };
+		3855C3C70BFB71A100DEB4F8 /* AQGLViewRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGLViewRenderContext.h; sourceTree = "<group>"; };
+		3855C3C80BFB71A100DEB4F8 /* AQGLViewRenderContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGLViewRenderContext.m; sourceTree = "<group>"; };
+		3855C3D80BFB785B00DEB4F8 /* AQGLViewPixelFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGLViewPixelFormat.h; sourceTree = "<group>"; };
+		3855C3D90BFB785B00DEB4F8 /* AQGLViewPixelFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGLViewPixelFormat.m; sourceTree = "<group>"; };
+		3855C3E00BFB7A5700DEB4F8 /* AQGLViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGLViewScene.h; sourceTree = "<group>"; };
+		3855C3E10BFB7A5700DEB4F8 /* AQGLViewScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGLViewScene.m; sourceTree = "<group>"; };
+		3855C42A0BFBCCC600DEB4F8 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/BackRow.nib; sourceTree = "<group>"; };
+		3855C4370BFBE4F500DEB4F8 /* AQOptionsManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AQOptionsManager.h; sourceTree = "<group>"; };
+		3855C4380BFBE4F500DEB4F8 /* AQOptionsManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AQOptionsManager.m; sourceTree = "<group>"; };
+		38615C2C0BF9DD830080B168 /* AQNSWindowRenderer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AQNSWindowRenderer.m; sourceTree = "<group>"; };
+		38615C2D0BF9DD830080B168 /* AQNSWindowRenderer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AQNSWindowRenderer.h; sourceTree = "<group>"; };
+		38615C320BF9DDC80080B168 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		38615C340BF9DDD70080B168 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		38615C3A0BF9DEF60080B168 /* AQAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQAppManager.h; sourceTree = "<group>"; };
+		38615C3B0BF9DEF60080B168 /* AQAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQAppManager.m; sourceTree = "<group>"; };
+		3879133C0BEE469A00889F93 /* BackRow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BackRow.framework; path = /System/Library/PrivateFrameworks/BackRow.framework; sourceTree = "<absolute>"; };
+		387913420BEE483900889F93 /* AQHarnessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQHarnessController.h; sourceTree = "<group>"; };
+		387913430BEE483900889F93 /* AQHarnessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQHarnessController.m; sourceTree = "<group>"; };
+		3879134B0BEE485F00889F93 /* AQIRRemoteMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQIRRemoteMonitor.h; sourceTree = "<group>"; };
+		3879134C0BEE485F00889F93 /* AQIRRemoteMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQIRRemoteMonitor.m; sourceTree = "<group>"; };
+		3879136C0BEF647100889F93 /* AQWindowRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQWindowRenderer.h; sourceTree = "<group>"; };
+		3879136D0BEF647100889F93 /* AQWindowRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQWindowRenderer.m; sourceTree = "<group>"; };
+		387917A60BEF99A800889F93 /* AQFakeMediaProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQFakeMediaProvider.h; sourceTree = "<group>"; };
+		387917A70BEF99A800889F93 /* AQFakeMediaProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQFakeMediaProvider.m; sourceTree = "<group>"; };
+		389D59820C2A0F6A00CDA967 /* QuIntroMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuIntroMovieController.h; sourceTree = "<group>"; };
+		389D59830C2A0F6A00CDA967 /* QuIntroMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuIntroMovieController.m; sourceTree = "<group>"; };
+		389D59DB0C2A3D4600CDA967 /* AppleTV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleTV.framework; path = /System/Library/PrivateFrameworks/AppleTV.framework; sourceTree = "<absolute>"; };
+		38FAF83B0BFF4DA400853CFE /* AQDisplayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQDisplayManager.h; sourceTree = "<group>"; };
+		38FAF83C0BFF4DA400853CFE /* AQDisplayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQDisplayManager.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* BackRow Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BackRow Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3879133D0BEE469A00889F93 /* BackRow.framework in Frameworks */,
+				38615C330BF9DDC80080B168 /* Cocoa.framework in Frameworks */,
+				38615C350BF9DDD70080B168 /* OpenGL.framework in Frameworks */,
+				3827D0430BFE4C4C004103B7 /* IOKit.framework in Frameworks */,
+				3827D0470BFE4C5E004103B7 /* Quartz.framework in Frameworks */,
+				3827D0850BFE4CD5004103B7 /* QuickTime.framework in Frameworks */,
+				389D59DC0C2A3D4600CDA967 /* AppleTV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				387913420BEE483900889F93 /* AQHarnessController.h */,
+				387913430BEE483900889F93 /* AQHarnessController.m */,
+				3879134B0BEE485F00889F93 /* AQIRRemoteMonitor.h */,
+				3879134C0BEE485F00889F93 /* AQIRRemoteMonitor.m */,
+				3879136C0BEF647100889F93 /* AQWindowRenderer.h */,
+				3879136D0BEF647100889F93 /* AQWindowRenderer.m */,
+				387917A60BEF99A800889F93 /* AQFakeMediaProvider.h */,
+				387917A70BEF99A800889F93 /* AQFakeMediaProvider.m */,
+				38615C2C0BF9DD830080B168 /* AQNSWindowRenderer.m */,
+				38615C2D0BF9DD830080B168 /* AQNSWindowRenderer.h */,
+				38615C3A0BF9DEF60080B168 /* AQAppManager.h */,
+				38615C3B0BF9DEF60080B168 /* AQAppManager.m */,
+				3855C3C70BFB71A100DEB4F8 /* AQGLViewRenderContext.h */,
+				3855C3C80BFB71A100DEB4F8 /* AQGLViewRenderContext.m */,
+				3855C3D80BFB785B00DEB4F8 /* AQGLViewPixelFormat.h */,
+				3855C3D90BFB785B00DEB4F8 /* AQGLViewPixelFormat.m */,
+				3855C3E00BFB7A5700DEB4F8 /* AQGLViewScene.h */,
+				3855C3E10BFB7A5700DEB4F8 /* AQGLViewScene.m */,
+				3855C4370BFBE4F500DEB4F8 /* AQOptionsManager.h */,
+				3855C4380BFBE4F500DEB4F8 /* AQOptionsManager.m */,
+				3827CF880BFCE999004103B7 /* AQKeyboardNavigator.h */,
+				3827CF890BFCE999004103B7 /* AQKeyboardNavigator.m */,
+				38FAF83B0BFF4DA400853CFE /* AQDisplayManager.h */,
+				38FAF83C0BFF4DA400853CFE /* AQDisplayManager.m */,
+				389D59820C2A0F6A00CDA967 /* QuIntroMovieController.h */,
+				389D59830C2A0F6A00CDA967 /* QuIntroMovieController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* BackRow Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* BackRowTestHarness */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = BackRowTestHarness;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* BackRowTestHarness_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3834E04B0C038CF6009BE46D /* BRDevKit.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				3855C4290BFBCCC600DEB4F8 /* BackRow.nib */,
+				3834DFFC0C0356CD009BE46D /* BRDevKit Help */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				389D59DB0C2A3D4600CDA967 /* AppleTV.framework */,
+				3827D0460BFE4C5E004103B7 /* Quartz.framework */,
+				3827D0420BFE4C4C004103B7 /* IOKit.framework */,
+				38615C340BF9DDD70080B168 /* OpenGL.framework */,
+				38615C320BF9DDC80080B168 /* Cocoa.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				3879133C0BEE469A00889F93 /* BackRow.framework */,
+				3827D0840BFE4CD5004103B7 /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* BackRow DevKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "BackRow DevKit" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				387913A50BEF78D900889F93 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BackRow DevKit";
+			productInstallPath = "$(HOME)/Applications";
+			productName = BackRowTestHarness;
+			productReference = 8D1107320486CEB800E47090 /* BackRow Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BackRowTestHarness" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* BackRowTestHarness */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* BackRow DevKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				3855C42B0BFBCCC600DEB4F8 /* BackRow.nib in Resources */,
+				3834E0270C0356CD009BE46D /* BRDevKit Help in Resources */,
+				3834E04C0C038CF6009BE46D /* BRDevKit.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				387913440BEE483900889F93 /* AQHarnessController.m in Sources */,
+				3879134D0BEE485F00889F93 /* AQIRRemoteMonitor.m in Sources */,
+				387917A90BEF99A800889F93 /* AQFakeMediaProvider.m in Sources */,
+				38615C2E0BF9DD830080B168 /* AQNSWindowRenderer.m in Sources */,
+				38615C3D0BF9DEF60080B168 /* AQAppManager.m in Sources */,
+				3855C3CA0BFB71A100DEB4F8 /* AQGLViewRenderContext.m in Sources */,
+				3855C3DB0BFB785B00DEB4F8 /* AQGLViewPixelFormat.m in Sources */,
+				3855C3E30BFB7A5700DEB4F8 /* AQGLViewScene.m in Sources */,
+				3855C43A0BFBE4F500DEB4F8 /* AQOptionsManager.m in Sources */,
+				3827CF8B0BFCE999004103B7 /* AQKeyboardNavigator.m in Sources */,
+				38FAF83E0BFF4DA400853CFE /* AQDisplayManager.m in Sources */,
+				389D59850C2A0F6A00CDA967 /* QuIntroMovieController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		3834DFFC0C0356CD009BE46D /* BRDevKit Help */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3834DFFD0C0356CD009BE46D /* English */,
+			);
+			name = "BRDevKit Help";
+			sourceTree = "<group>";
+		};
+		3855C4290BFBCCC600DEB4F8 /* BackRow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3855C42A0BFBCCC600DEB4F8 /* English */,
+			);
+			name = BackRow.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Developer/Applications;
+				PRODUCT_NAME = "BackRow Test";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Developer/Applications;
+				PRODUCT_NAME = "BackRow Test";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "BackRow DevKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BackRowTestHarness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
